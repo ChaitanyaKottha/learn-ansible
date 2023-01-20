@@ -4,3 +4,12 @@
    -name: Print Hello
     ansible.builtin.debug:
      msg: Hello World
+# Variable in YAML
+-name: Variable
+  hosts: all
+  vars:
+    URL: youtube.com
+  tasks:
+    -name: Access & Print Variable
+     ansible.builtin.debug:
+     msg: URl == {{URL}}
